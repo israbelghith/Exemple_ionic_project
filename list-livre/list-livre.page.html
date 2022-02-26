@@ -1,0 +1,26 @@
+<ion-header >
+  <ion-toolbar color="primary">
+    <ion-title ><h3>La Liste des Livres</h3></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card [routerLink]="['/detail-livre', u.id]" button *ngFor="let u of livres">
+
+<ion-card-header>
+  <ion-card-title>
+    Titre: {{u.titre}}
+  </ion-card-title>
+</ion-card-header>
+
+<ion-card-content>
+  <h4>Prix: {{u.prix}} DT</h4>
+</ion-card-content>
+<ion-img
+[src]="u.image"  >
+</ion-img>
+
+</ion-card>
+
+
+</ion-content>
